@@ -1,6 +1,6 @@
 import axios from "axios"
 import { HOST_URL } from "./api"
-
+import {ACCESS_TOKEN, TOKEN_ACTIVE, LOGIN_STATE,  USER_LOGIN} from './constanst'
 
 const loginWup = async (user) =>{
     let url = HOST_URL + "user/login"
@@ -23,5 +23,13 @@ const loginWup = async (user) =>{
 }
 
 
+const signout = () =>{
+    window.localStorage.removeItem(ACCESS_TOKEN)
+    window.localStorage.removeItem(TOKEN_ACTIVE)
+    window.localStorage.removeItem(LOGIN_STATE)
+    window.localStorage.removeItem(USER_LOGIN)
+    
+}
 
-export {loginWup}
+
+export {loginWup, signout}

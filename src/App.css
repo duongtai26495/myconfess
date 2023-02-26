@@ -16,6 +16,12 @@
   background-color: var(--secondary-color) !important;
 }
 
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-secondary{
+  color: var(--secondary-color) !important;
+}
 .card-feature-image{
   max-height: 300px;
   min-height: 200px;

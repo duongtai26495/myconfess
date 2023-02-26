@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ACCESS_TOKEN, LOGIN_STATE, TOKEN_ACTIVE } from '../components/config/constanst'
-
+import { signout } from '../components/config/functions';
+import CustomButton from '../components/account/CustomButton'
 const Account = () => {
 
   const navigate = useNavigate();
@@ -18,8 +19,18 @@ const Account = () => {
     check_user()
   },[])
 
+  const accountSignOut = () => {
+    signout()
+    navigate("/authen")
+  }
+
   return (
-    <div>Account</div>
+    <div>
+      <CustomButton 
+      title="Logout"
+      style={"w-full p-2 bg-primary text-white"}
+      onClick={()=>accountSignOut()}/>
+    </div>
   )
 }
 
