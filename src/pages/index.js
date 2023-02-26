@@ -1,0 +1,5 @@
+export {default as HomePage} from './HomePage'
+export {default as Articles} from './Articles'
+export {default as Account} from './Account'
+export {default as Authen} from './Authen'
+export {default as ErrorPage} from './ErrorPage'

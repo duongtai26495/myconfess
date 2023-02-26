@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --primary-color: #439A97;
+  --secondary-color:#62B6B7;
+}
+
+.bg-primary{
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary{
+  background-color: var(--secondary-color) !important;
+}
+
+.card-feature-image{
+  max-height: 300px;
+  min-height: 200px;
+}
+.card-preview{
+  bottom:0px;
+}
+.card-avatar{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
