@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+ 
 :root{
   --primary-color: #439A97;
   --secondary-color:#62B6B7;
@@ -26,6 +25,11 @@
   max-height: 300px;
   min-height: 200px;
 }
+.article-image{
+  height: fit-content;
+  max-height: 70vh;
+  min-height: 300px;
+}
 .card-preview{
   bottom:0px;
 }
@@ -33,4 +37,21 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+.custom-button{
+  transition: all 500ms;
+}
+
+.nav-items:hover{color:var(--primary-color)}
+@media only screen and (min-width: 1024px) {
+.article-card:hover{transform: translateY(-10px) ;}
+}
+
+
+.loading_gif {
+  transition: ease-in-out; 
+}
+
+.add_btn{
+  filter: drop-shadow(5px 5px 3px rgba(105, 105, 105, 0.3));
 }

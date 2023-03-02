@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Empty = () => {
+const Empty = ({ type }) => {
+
+  const [result, setResult] = useState("")
+  
+  useEffect(()=>{
+    const display_content = () => {
+      switch (type) {
+        case "comment":
+          setResult("No comment to show")
+          break;
+        case "article":
+          setResult("No article to show")
+          break;
+      }
+    }
+    
+    display_content()
+  },)
+  
+
   return (
-    <div>Empty</div>
+    <div>{result}</div>
   )
 }
 

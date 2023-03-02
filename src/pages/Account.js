@@ -1,22 +1,15 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ACCESS_TOKEN, LOGIN_STATE, TOKEN_ACTIVE } from '../components/config/constanst'
-import { signout } from '../components/config/functions';
+import { ACCESS_TOKEN, LOGIN_STATE } from '../config/constanst'
+import { signout, user } from '../config/accountAPI';
 import CustomButton from '../components/account/CustomButton'
+
 const Account = () => {
 
   const navigate = useNavigate();
 
   useEffect(()=>{
-    const check_user = () =>{
-      if (window.localStorage.getItem(LOGIN_STATE) == 'true' && window.localStorage.getItem(ACCESS_TOKEN)){
-        navigate("/account")
-      }else{
-        navigate("/authen")
-      }
-    }
-
-    check_user()
+    user() ? navigate("/account") : navigate("/authen")
   },[])
 
   const accountSignOut = () => {

@@ -3,16 +3,16 @@ import { ARTICLES } from '../../data/articles-data'
 import ArticleCard from './ArticleCard'
 import Empty from './Empty'
 
-const ArticleList = () => {
+const ArticleList = ({items}) => {
 
-    const articles = ARTICLES
+    const articles = items
     return (
         articles.length > 0 ?
-            articles.map(item => (
+            articles?.map(item => (
                 <ArticleCard key={item.id} article={item} />
             ))
             :
-            <Empty />
+            <Empty type={"article"} />
     )
 }
 

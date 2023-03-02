@@ -54,8 +54,7 @@ const Header = () => {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mt-2 md:block md:pb-0 md:mt-0 transition-all ${navbar ? "block" : "hidden"
-                            }`}
+                        className={`flex-1 justify-self-center mt-2 md:block md:pb-0 md:mt-0 transition-all ${navbar ? "block" : "hidden" }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 bg-slate-200 md:bg-white p-2 md:p-0 mb-2 md:mb-0 rounded ">
                             {
