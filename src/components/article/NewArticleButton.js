@@ -14,11 +14,11 @@ const NewArticleButton = () => {
     }
 
     return (
-        <div onClick={() => add_article_handle()} className='absolute bottom-10 right-10 cursor-pointer z-50'>
+        <div onClick={() => add_article_handle()} className='sticky bottom-5 float-right right-5 cursor-pointer z-50'>
             <svg
                 className="add_btn" 
-                height="70px"
-                width="70px"
+                height="50px"
+                width="50px"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
